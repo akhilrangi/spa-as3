@@ -3,6 +3,8 @@
   <head>
     <title>Narrow Down Your Menu Choice</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+	<script src="angular.min.js"></script>
+    <script src="app.js"></script>
     <link rel="stylesheet" href="styles/bootstrap.min.css">
     <link rel="stylesheet" href="styles/styles.css">
   </head>
@@ -20,6 +22,16 @@
     <!-- found-items should be implemented as a component -->
     <found-items found-items="...." on-remove="...."></found-items>
   </div>
+  
+  <div ng-app='MenuCategoriesApp' ng-controller='MenuCategoriesController as menu'>
+      <h3>List of Menu Categories</h3>
+      <ul>
+        <li ng-repeat="category in menu.categories">
+          (<a href="" ng-click="menu.logMenuItems(category.short_name);">{{ category.short_name }}</a>)
+          {{ category.name }}
+        </li>
+      </ul>
+    </div>
 
 </body>
 </html>
