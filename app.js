@@ -27,6 +27,8 @@ function FoundItemsDirective() {
 		narrow.narrowItDown = function () {
 			
 			narrow.found = MenuSearchService.getMatchedMenuItems(narrow.searchTerm);
+			
+			console.log(narrow.found);
 
 			narrow.found.then(function (response) {
 				console.log(response);
