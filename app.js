@@ -27,11 +27,10 @@ function FoundItemsDirective() {
 		narrow.narrowItDown = function () {
 			
 			narrow.found = MenuSearchService.getMatchedMenuItems(narrow.searchTerm);
-			
-			console.log(narrow.found);
 
 			narrow.found.then(function (response) {
 				console.log(response);
+				$scope.data1 = response;
 			})
 			.catch (function (error) {
 				console.log(error);
