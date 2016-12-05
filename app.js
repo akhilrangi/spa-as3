@@ -20,8 +20,8 @@ function FoundItemsDirective() {
   return ddo;
 }
 
-	NarrowItDownController.$inject = ['MenuSearchService'];
-	function NarrowItDownController(MenuSearchService) {
+	NarrowItDownController.$inject = ['MenuSearchService','$scope'];
+	function NarrowItDownController(MenuSearchService,$scope) {
 		var narrow = this;
 
 		narrow.narrowItDown = function () {
