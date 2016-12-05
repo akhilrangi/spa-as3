@@ -12,12 +12,18 @@ function FoundItemsDirective() {
   var ddo = {
     templateUrl: 'foundItems.html',
 	scope: {
-      items: '<',
-      onRemove: '&'
+      foundItems: '<',
+      onRemove: '&',
+	  controller: FoundItemsDirectiveController,
+	  controllerAs: 'list',
+      bindToController: true
     }
   };
 
   return ddo;
+}
+function FoundItemsDirectiveController() {
+  var list = this;  
 }
 
 	NarrowItDownController.$inject = ['MenuSearchService'];
