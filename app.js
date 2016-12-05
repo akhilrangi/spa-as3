@@ -10,24 +10,25 @@
 
 function FoundItemsDirective() {
   var ddo = {
-    template: '<li ng-repeat="item in items"> {{ item.name }} -- ( {{ item.short_name }}  ) : {{ item.description }} </li>',
-	restrict: 'AE',
-	scope: {
-      items: '<'
-	  // ,
-      // onRemove: '&'
-    },
-	replace: true,
-	controller: FoundItemsDirectiveController,
-	controllerAs: 'list',
-    bindToController: true
+    //template: '<li ng-repeat="item in items"> {{ item.name }} -- ( {{ item.short_name }}  ) : {{ item.description }} </li>',
+	template: 'hello'
+	// restrict: 'AE',
+	// scope: {
+      // items: '<'
+	  // // ,
+      // // onRemove: '&'
+    // },
+	// replace: 'true',
+	// controller: FoundItemsDirectiveController,
+	// controllerAs: 'list',
+    // bindToController: true
   };
 
   return ddo;
 }
-function FoundItemsDirectiveController() {
-  var list = this;  
-}
+// function FoundItemsDirectiveController() {
+  // var list = this;  
+// }
 
 	NarrowItDownController.$inject = ['MenuSearchService'];
 	function NarrowItDownController(MenuSearchService) {
