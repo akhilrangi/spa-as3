@@ -14,10 +14,16 @@ function FoundItemsDirective() {
 	,
 	scope: {
 	  ngModel: '=',
-	  foundData:'@'
-	}
+	  foundData:'@',
+	 controller: FoundItemsDirectiveController,
+	 controllerAs: 'list',
+     bindToController: true
   };
+
   return ddo;
+}
+function FoundItemsDirectiveController() {
+   var list = this;  
 }
 
 	NarrowItDownController.$inject = ['MenuSearchService'];
