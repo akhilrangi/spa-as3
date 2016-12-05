@@ -1,6 +1,6 @@
 <ol>
-  <li ng-repeat="item in narrow.found">
+  <li ng-repeat="item in search.foundData">
     {{ item.name }} -- ( {{ item.short_name }}  ) : {{ item.description }}    
-	<button ng-click="narrow.onRemove({index: $index});">Remove Item</button>
+	<button ng-click="search.onRemove({index: $index});">Remove Item</button>
   </li>
 </ol>
