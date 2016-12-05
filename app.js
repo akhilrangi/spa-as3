@@ -10,7 +10,7 @@
 
 function FoundItemsDirective() {
   var ddo = {
-	template: 'hello'
+	templateUrl: 'foundItems.html'
   };
   return ddo;
 }
