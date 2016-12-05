@@ -30,6 +30,7 @@ function FoundItemsDirective() {
 
 			narrow.found.then(function (response) {
 				console.log(response);
+				narrow.foundData=response;
 				$scope.data1 = response;
 			})
 			.catch (function (error) {
