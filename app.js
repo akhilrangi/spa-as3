@@ -10,13 +10,14 @@
 
 function FoundItemsDirective() {
   var ddo = {
-    templateUrl: 'foundItems.html',
+    template: '<li ng-repeat="item in items"> {{ item.name }} -- ( {{ item.short_name }}  ) : {{ item.description }} </li>',
 	restrict: 'AE',
 	scope: {
       items: '<'
 	  // ,
       // onRemove: '&'
     },
+	replace: true,
 	controller: FoundItemsDirectiveController,
 	controllerAs: 'list',
     bindToController: true
