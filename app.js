@@ -11,6 +11,11 @@
 function FoundItemsDirective() {
   var ddo = {
 	templateUrl: 'foundItems.html'
+	,
+	scope: {
+	  ngModel: '=',
+	  foundData:'@'
+	}
   };
   return ddo;
 }
